@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "League Spartan", sans-serif;
+  color: hsl(300, 43%, 22%);
+  font-size: 15px;
+}
+
+main {
+  height: 100%;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.message {
+  width: 30%;
+}
+
+.ratings {
+  background-color: hsl(300, 24%, 96%);
+  padding: 10px 40px;
+  margin: 10px 0px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  width: 400px;
+}
+
+.rated {
+  padding-left: 15px;
+}
+
+.ratings2 {
+  transform: translateX(40px);
+}
+
+.ratings3 {
+  transform: translateX(80px);
+}
+
+.message h1 {
+  font-size: 45px;
+  padding-bottom: 20px;
+}
+
+.message p {
+  line-height: 1.5rem;
+}
+
+div.box-container {
+  display: grid;
+  /* grid-template-columns: repeat(3, 350px); */
+  grid-template-areas: "one two three";
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.box {
+  background-color: hsl(300, 43%, 22%);
+  color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  /* margin-top: 50px; */
+  width: 400px;
+}
+
+.box1 {
+  grid-area: one;
+}
+
+.box2 {
+  grid-area: two;
+  transform: translateY(20px);
+}
+
+.box3 {
+  grid-area: three;
+  transform: translateY(40px);
+}
+
+div.hd img {
+  width: 40px;
+  border-radius: 100%;
+  margin-right: 20px;
+}
+
+div.hd {
+  display: flex;
+  align-items: center;
+}
+
+.message-content {
+  margin-top: 20px;
+  line-height: 20px;
+}
+
+.tag {
+  color: hsl(333, 80%, 67%);
+  padding-top: 5px;
+}
+
+/* footer */
+footer {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+@media (max-width: 1000px) and (orientation: portrait) {
+  .heading {
+    display: block;
+  }
+
+  .message {
+    width: auto;
+    text-align: center;
+  }
+
+  .ratings {
+    display: block;
+    text-align: center;
+    width: 350px;
+    margin: 10px auto;
+  }
+
+  .ratings2,
+  .ratings3 {
+    transform: translateX(0px);
+  }
+
+  .rated {
+    padding-left: 0px;
+    padding-top: 15px;
+  }
+
+  div.box-container {
+    grid-template-areas:
+      "one"
+      "two"
+      "three";
+  }
+
+  body {
+    height: 100%;
+  }
+
+  .box {
+    width: 350px;
+    margin-top: 0px;
+  }
+
+  .box2,
+  .box3 {
+    transform: translateY(0px);
+  }
+
+  main {
+    margin: 0px 20px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 380px) and (orientation: portrait) {
+  .box {
+    width: 280px;
+  }
+
+  main {
+    margin-bottom: 70px;
+  }
+}
